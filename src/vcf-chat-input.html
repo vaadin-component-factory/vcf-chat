@@ -11,7 +11,7 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
 <link rel="import" href="../../vaadin-text-field/vaadin-text-area.html">
 <link rel="import" href="../../vaadin-button/vaadin-button.html">
 
-<dom-module id="incubator-chat-input">
+<dom-module id="vcf-chat-input">
   <template>
     <style>
       :host {
@@ -46,19 +46,19 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
   <script>
     (function() {
       /**
-       * `<incubator-chat-input>` is a.
+       * `<vcf-chat-input>` is a.
        *
        * ```
-       * <incubator-chat-input>
-       * </incubator-chat-input>
+       * <vcf-chat-input>
+       * </vcf-chat-input>
        * ```
        *
        * @memberof Vaadin
        * @demo demo/index.html
        */
-      class IncubatorChatInput extends Vaadin.ThemableMixin(Polymer.Element) {
+      class VcfChatInput extends Vaadin.ThemableMixin(Polymer.Element) {
         static get is() {
-          return 'incubator-chat-input';
+          return 'vcf-chat-input';
         }
 
         static get properties() {
@@ -84,7 +84,7 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
 
         _dispatchNewMessage() {
           if (this.body) {
-            this.dispatchEvent(new CustomEvent('incubator-chat-new-message', {
+            this.dispatchEvent(new CustomEvent('vcf-chat-new-message', {
               bubbles: true,
               composed: true,
               detail: {
@@ -99,15 +99,15 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
         }
       }
 
-      customElements.define(IncubatorChatInput.is, IncubatorChatInput);
+      customElements.define(VcfChatInput.is, VcfChatInput);
 
       /**
        * @namespace Vaadin
        */
-      window.Vaadin.IncubatorChatInput = IncubatorChatInput;
+      window.Vaadin.VcfChatInput = VcfChatInput;
 
       if (window.Vaadin.runIfDevelopmentMode) {
-        window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', IncubatorChatInput);
+        window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', VcfChatInput);
       }
     })();
   </script>

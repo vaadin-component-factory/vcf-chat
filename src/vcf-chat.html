@@ -11,18 +11,18 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
 <link rel="import" href="../../vaadin-element-mixin/vaadin-element-mixin.html">
 <link rel="import" href="../../vaadin-progress-bar/vaadin-progress-bar.html">
 <link rel="import" href="../../iron-list/iron-list.html">
-<link rel="import" href="incubator-chat-message.html">
-<link rel="import" href="incubator-chat-input.html">
+<link rel="import" href="vcf-chat-message.html">
+<link rel="import" href="vcf-chat-input.html">
 
-<dom-module id="incubator-chat">
+<dom-module id="vcf-chat">
   <template>
     <style>
       :host {
         display: block;
 
-        --incubator-chat-message-thread-height: 500px;
-        --incubator-chat-message-thread-spacing: 10px;
-        --incubator-chat-loading-indicator-width: 98%;
+        --vcf-chat-message-thread-height: 500px;
+        --vcf-chat-message-thread-spacing: 10px;
+        --vcf-chat-loading-indicator-width: 98%;
 
         --iron-list-items-container: {
           border-bottom: 10px solid transparent;
@@ -38,11 +38,11 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
       }
 
       [part="message"] + [part="message"] {
-        padding-top: var(--incubator-chat-message-thread-spacing);
+        padding-top: var(--vcf-chat-message-thread-spacing);
       }
 
       [part="message-thread-container"] {
-        height: var(--incubator-chat-message-thread-height);
+        height: var(--vcf-chat-message-thread-height);
         overflow: auto;
         -webkit-overflow-scrolling: touch;
       }
@@ -66,7 +66,7 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
       on-scroll="_triggerLazyLoad">
 
       <slot name="loading-indicator">
-          <vaadin-progress-bar indeterminate style="width: var(--incubator-chat-loading-indicator-width);"></vaadin-progress-bar>
+          <vaadin-progress-bar indeterminate style="width: var(--vcf-chat-loading-indicator-width);"></vaadin-progress-bar>
       </slot>
 
       <iron-list
@@ -76,39 +76,39 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
         scroll-target="messageThreadContainer"
         as="message">
         <template>
-          <incubator-chat-message
+          <vcf-chat-message
             part="message"
             body="[[message.body]]"
             sender-name="[[message.senderName]]"
             avatar="[[message.avatar]]"
             outgoing="[[message.currentUser]]">
-          </incubator-chat-message>
+          </vcf-chat-message>
         </template>
       </iron-list>
     </div>
 
-    <incubator-chat-input
+    <vcf-chat-input
       id="messageInput"
       part="message-input">
-    </incubator-chat-input>
+    </vcf-chat-input>
   </template>
 
   <script>
     (function() {
       /**
-       * `<incubator-chat>` is a template for incubator components.
+       * `<vcf-chat>` is a template for vcf components.
        *
        * ```
-       * <incubator-chat>
-       * </incubator-chat>
+       * <vcf-chat>
+       * </vcf-chat>
        * ```
        *
        * @memberof Vaadin
        * @demo demo/index.html
        */
-      class IncubatorChat extends Vaadin.ElementMixin(Vaadin.ThemableMixin(Polymer.Element)) {
+      class VcfChat extends Vaadin.ElementMixin(Vaadin.ThemableMixin(Polymer.Element)) {
         static get is() {
-          return 'incubator-chat';
+          return 'vcf-chat';
         }
 
         static get properties() {
@@ -189,7 +189,7 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
                 this._firstVisibleItem = this.messages[this.$.messageThread.firstVisibleIndex];
 
                 this.loading = true;
-                this.dispatchEvent(new CustomEvent('incubator-chat-trigger-lazy-load', {
+                this.dispatchEvent(new CustomEvent('vcf-chat-trigger-lazy-load', {
                   bubbles: true,
                   composed: true
                 }));
@@ -199,15 +199,15 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
         }
       }
 
-      customElements.define(IncubatorChat.is, IncubatorChat);
+      customElements.define(VcfChat.is, VcfChat);
 
       /**
        * @namespace Vaadin
        */
-      window.Vaadin.IncubatorChat = IncubatorChat;
+      window.Vaadin.VcfChat = VcfChat;
 
       if (window.Vaadin.runIfDevelopmentMode) {
-        window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', IncubatorChat);
+        window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', VcfChat);
       }
     })();
   </script>

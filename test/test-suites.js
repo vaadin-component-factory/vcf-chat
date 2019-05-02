@@ -1,3 +1,3 @@
-window.IncubatorChatSuites = [
+window.VcfChatSuites = [
   'sample.html',
 ];

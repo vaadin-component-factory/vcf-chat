@@ -1,19 +1,19 @@
 {
-  "name": "incubator-chat",
+  "name": "vcf-chat",
   "homepage": "https://vaadin.com/components",
   "authors": [
     "Vaadin Ltd"
   ],
-  "description": "incubator-chat",
-  "main": "incubator-chat.html",
+  "description": "vcf-chat",
+  "main": "vcf-chat.html",
   "keywords": [
     "Vaadin",
-    "incubator-chat",
+    "vcf-chat",
     "web-components",
     "web-component",
     "polymer"
   ],
-  "license": "https://raw.githubusercontent.com/vaadin/incubator-chat/master/LICENSE",
+  "license": "https://raw.githubusercontent.com/vaadin/vcf-chat/master/LICENSE",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -31,7 +31,7 @@
     "iron-list": "v2.0.16",
     "vaadin-text-field": "^2.1.2",
     "vaadin-button": "^2.1.0",
-    "incubator-avatar": "vaadin/incubator-avatar#^1.2.4",
+    "vcf-avatar": "vaadin-component-factory/vcf-avatar#^1.3.0",
     "vaadin-progress-bar": "vaadin/vaadin-progress-bar#^1.1.0"
   },
   "devDependencies": {

@@ -8,14 +8,14 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
 
 <link rel="import" href="../../polymer/polymer-element.html">
 <link rel="import" href="../../vaadin-themable-mixin/vaadin-themable-mixin.html">
-<link rel="import" href="../../incubator-avatar/incubator-avatar.html">
+<link rel="import" href="../../vcf-avatar/vcf-avatar.html">
 
-<dom-module id="incubator-chat-message">
+<dom-module id="vcf-chat-message">
   <template>
     <style>
       :host {
-        --incubator-chat-message-avatar-width: 50px;
-        --incubator-chat-message-avatar-height: 50px;
+        --vcf-chat-message-avatar-width: 50px;
+        --vcf-chat-message-avatar-height: 50px;
 
         display: flex;
       }
@@ -24,9 +24,9 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
         flex-direction: row-reverse;
       }
 
-      incubator-avatar {
-        width: var(--incubator-chat-message-avatar-width);
-        height: var(--incubator-chat-message-avatar-height);
+      vcf-avatar {
+        width: var(--vcf-chat-message-avatar-width);
+        height: var(--vcf-chat-message-avatar-height);
       }
 
       [part="content"] {
@@ -47,12 +47,12 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
       }
     </style>
 
-    <incubator-avatar
+    <vcf-avatar
       part="avatar"
       image="[[avatar]]"
       name="[[senderName]]"
       no-tooltip>
-    </incubator-avatar>
+    </vcf-avatar>
 
     <div part="content">
       <div part="username">
@@ -68,19 +68,19 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
   <script>
     (function() {
       /**
-       * `<incubator-chat-message>` is a.
+       * `<vcf-chat-message>` is a.
        *
        * ```
-       * <incubator-chat-message>
-       * </incubator-chat-message>
+       * <vcf-chat-message>
+       * </vcf-chat-message>
        * ```
        *
        * @memberof Vaadin
        * @demo demo/index.html
        */
-      class IncubatorChatMessage extends Vaadin.ThemableMixin(Polymer.Element) {
+      class VcfChatMessage extends Vaadin.ThemableMixin(Polymer.Element) {
         static get is() {
-          return 'incubator-chat-message';
+          return 'vcf-chat-message';
         }
 
         static get properties() {
@@ -106,15 +106,15 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
         }
       }
 
-      customElements.define(IncubatorChatMessage.is, IncubatorChatMessage);
+      customElements.define(VcfChatMessage.is, VcfChatMessage);
 
       /**
        * @namespace Vaadin
        */
-      window.Vaadin.IncubatorChatMessage = IncubatorChatMessage;
+      window.Vaadin.VcfChatMessage = VcfChatMessage;
 
       if (window.Vaadin.runIfDevelopmentMode) {
-        window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', IncubatorChatMessage);
+        window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', VcfChatMessage);
       }
     })();
   </script>

@@ -6,7 +6,7 @@
       "description": "",
       "summary": "",
       "sourceRange": {
-        "file": "src/incubator-chat.html",
+        "file": "src/vcf-chat.html",
         "start": {
           "line": 44,
           "column": 6
@@ -18,9 +18,9 @@
       },
       "elements": [
         {
-          "description": "`<incubator-chat>` is a template for incubator components.\n\n```\n<incubator-chat>\n</incubator-chat>\n```",
+          "description": "`<vcf-chat>` is a template for vcf components.\n\n```\n<vcf-chat>\n</vcf-chat>\n```",
           "summary": "",
-          "path": "src/incubator-chat.html",
+          "path": "src/vcf-chat.html",
           "properties": [],
           "methods": [],
           "staticMethods": [],
@@ -43,7 +43,7 @@
           },
           "privacy": "public",
           "superclass": "HTMLElement",
-          "name": "Vaadin.IncubatorChat",
+          "name": "Vaadin.VcfChat",
           "attributes": [],
           "events": [],
           "styling": {
@@ -51,7 +51,7 @@
             "selectors": []
           },
           "slots": [],
-          "tagname": "incubator-chat"
+          "tagname": "vcf-chat"
         }
       ]
     }

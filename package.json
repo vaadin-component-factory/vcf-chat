@@ -1,25 +1,25 @@
 {
-  "name": "@vaadin/incubator-chat",
+  "name": "@vaadin/vcf-chat",
   "version": "1.0.0-beta2",
-  "description": "incubator-chat",
-  "main": "incubator-chat.html",
-  "repository": "vaadin/incubator-chat",
+  "description": "vcf-chat",
+  "main": "vcf-chat.html",
+  "repository": "vaadin/vcf-chat",
   "keywords": [
     "Vaadin",
-    "incubator-chat",
+    "vcf-chat",
     "web-components",
     "web-component",
     "polymer"
   ],
   "author": "Vaadin Ltd",
-  "license": "https://raw.githubusercontent.com/vaadin/incubator-chat/master/LICENSE",
+  "license": "https://raw.githubusercontent.com/vaadin/vcf-chat/master/LICENSE",
   "bugs": {
-    "url": "https://github.com/vaadin/incubator-chat/issues"
+    "url": "https://github.com/vaadin/vcf-chat/issues"
   },
   "homepage": "https://vaadin.com/components",
   "scripts": {
     "test": "wct",
-    "analyze": "polymer analyze incubator-chat.html > analysis.json",
+    "analyze": "polymer analyze vcf-chat.html > analysis.json",
     "preversion": "gulp version:update"
   },
   "devDependencies": {

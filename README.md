@@ -1,45 +1,45 @@
-[![Build Status](https://travis-ci.org/vaadin/incubator-chat.svg?branch=master)](https://travis-ci.org/vaadin/incubator-chat)
+[![Build Status](https://travis-ci.org/vaadin/vcf-chat.svg?branch=master)](https://travis-ci.org/vaadin/vcf-chat)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin/web-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/vaadinincubator-chat)
-[![Stars in Vaadin_Directory](https://img.shields.io/vaadin-directory/stars/vaadinincubator-chat.svg)](https://vaadin.com/directory/component/vaadinincubator-chat)
-[![Latest Version](https://img.shields.io/vaadin-directory/v/vaadinincubator-chat.svg)](https://vaadin.com/directory/component/vaadinincubator-chat)
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/vaadinvcf-chat)
+[![Stars in Vaadin_Directory](https://img.shields.io/vaadin-directory/stars/vaadinvcf-chat.svg)](https://vaadin.com/directory/component/vaadinvcf-chat)
+[![Latest Version](https://img.shields.io/vaadin-directory/v/vaadinvcf-chat.svg)](https://vaadin.com/directory/component/vaadinvcf-chat)
 
-# &lt;incubator-chat&gt;
+# &lt;vcf-chat&gt;
 
-[Live Demo ↗](http://incubator.app.fi/incubator-chat-demo)
+[Live Demo ↗](http://incubator.app.fi/vcf-chat-demo)
 |
-[API documentation ↗](https://vaadin.com/directory/component/vaadinincubator-chat)
+[API documentation ↗](https://vaadin.com/directory/component/vaadinvcf-chat)
 
 
-[&lt;incubator-chat&gt;](https://vaadin.com/directory/component/vaadinincubator-chat) is a Web Component chat implementation with virtual scroll, infinite scroll and scrolling from bottom to top.
+[&lt;vcf-chat&gt;](https://vaadin.com/directory/component/vaadinvcf-chat) is a Web Component chat implementation with virtual scroll, infinite scroll and scrolling from bottom to top.
 
 ```html
-  <incubator-chat lazy-load-trigger-offset="300">
+  <vcf-chat lazy-load-trigger-offset="300">
     <div class="loading-indicator" slot="loading-indicator">
       Loading..
     </div>
-  </incubator-chat>
+  </vcf-chat>
 ```
 
-[<img src="https://raw.githubusercontent.com/vaadin/incubator-chat/master/screenshot.png" width="200" alt="Screenshot of incubator-chat">](https://vaadin.com/directory/component/vaadinincubator-chat)
+[<img src="https://raw.githubusercontent.com/vaadin/vcf-chat/master/screenshot.png" width="200" alt="Screenshot of vcf-chat">](https://vaadin.com/directory/component/vaadinvcf-chat)
 
 
 ## Installation
 
-The Vaadin Incubator components are distributed as Bower packages.
+The Vaadin Vcf components are distributed as Bower packages.
 
 ### Polymer 2 and HTML Imports compatible version
 
-Install `incubator-chat`:
+Install `vcf-chat`:
 
 ```sh
-bower i vaadin/incubator-chat --save
+bower i vaadin/vcf-chat --save
 ```
 
 Once installed, import it in your application:
 
 ```html
-<link rel="import" href="bower_components/incubator-chat/incubator-chat.html">
+<link rel="import" href="bower_components/vcf-chat/vcf-chat.html">
 ```
 
 ## Getting Started
@@ -48,38 +48,38 @@ Vaadin components use the Lumo theme by default.
 
 ## The file structure for Vaadin components
 
-- `src/incubator-chat.html`
+- `src/vcf-chat.html`
 
   Unstyled component.
 
-- `theme/lumo/incubator-chat.html`
+- `theme/lumo/vcf-chat.html`
 
   Component with Lumo theme.
 
-- `incubator-chat.html`
+- `vcf-chat.html`
 
-  Alias for theme/lumo/incubator-chat.html
+  Alias for theme/lumo/vcf-chat.html
 
 
 ## Running demos and tests in browser
 
-1. Fork the `incubator-chat` repository and clone it locally.
+1. Fork the `vcf-chat` repository and clone it locally.
 
 1. Make sure you have [npm](https://www.npmjs.com/) installed.
 
-1. When in the `incubator-chat` directory, run `npm install` and then `bower install` to install dependencies.
+1. When in the `vcf-chat` directory, run `npm install` and then `bower install` to install dependencies.
 
 1. Run `polymer serve --open`, browser will automatically open the component API documentation.
 
 1. You can also open demo or in-browser tests by adding **demo** or **test** to the URL, for example:
 
-  - http://127.0.0.1:8080/components/incubator-chat/demo
-  - http://127.0.0.1:8080/components/incubator-chat/test
+  - http://127.0.0.1:8080/components/vcf-chat/demo
+  - http://127.0.0.1:8080/components/vcf-chat/test
 
 
 ## Running tests from the command line
 
-1. When in the `incubator-chat` directory, run `polymer test`
+1. When in the `vcf-chat` directory, run `polymer test`
 
 
 ## Following the coding style

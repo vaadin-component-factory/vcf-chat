@@ -1,4 +1,4 @@
-gemini.suite('incubator-chat', function(rootSuite) {
+gemini.suite('vcf-chat', function(rootSuite) {
   function wait(actions, find) {
     actions.wait(5000);
   }

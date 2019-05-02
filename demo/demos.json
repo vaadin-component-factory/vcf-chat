@@ -1,12 +1,12 @@
 {
-  "name": "Vaadin Incubator Element",
+  "name": "Vaadin Vcf Element",
   "pages": [
   {
     "name": "Basics",
-    "url": "incubator-chat-basic-demos",
-    "src": "incubator-chat-basic-demos.html",
+    "url": "vcf-chat-basic-demos",
+    "src": "vcf-chat-basic-demos.html",
     "meta": {
-      "title": "incubator-chat Basic Examples",
+      "title": "vcf-chat Basic Examples",
       "description": "",
       "image": ""
      }

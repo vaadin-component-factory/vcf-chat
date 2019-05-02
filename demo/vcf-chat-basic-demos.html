@@ -1,4 +1,4 @@
-<dom-module id="incubator-chat-basic-demos">
+<dom-module id="vcf-chat-basic-demos">
   <template>
     <style include="vaadin-component-demo-shared-styles">
       :host {
@@ -7,7 +7,7 @@
     </style>
 
     <h3>Demo sample</h3>
-    <vaadin-demo-snippet id="incubator-chat-demo-sample">
+    <vaadin-demo-snippet id="vcf-chat-demo-sample">
       <template preserve-content>
         <style>
           .loading-indicator {
@@ -15,13 +15,13 @@
           }
         </style>
 
-        <incubator-chat
+        <vcf-chat
           id="demo1"
           lazy-load-trigger-offset="300">
           <div class="loading-indicator" slot="loading-indicator">
             Loading..
           </div>
-        </incubator-chat>
+        </vcf-chat>
 
         <script>
           let messageIndex = 0;
@@ -54,28 +54,28 @@
             }
           }
 
-          window.addDemoReadyListener('#incubator-chat-demo-sample', function(document) {
-            const incubatorChat = document.querySelector('#demo1');
+          window.addDemoReadyListener('#vcf-chat-demo-sample', function(document) {
+            const vcfChat = document.querySelector('#demo1');
 
-            addMessages(incubatorChat);
+            addMessages(vcfChat);
 
-            incubatorChat.addEventListener('incubator-chat-trigger-lazy-load', () => {
+            vcfChat.addEventListener('vcf-chat-trigger-lazy-load', () => {
               setTimeout(() => {
-                addMessages(incubatorChat);
-                incubatorChat.loading = false;
+                addMessages(vcfChat);
+                vcfChat.loading = false;
               }, 400);
             });
 
-            incubatorChat.addEventListener('incubator-chat-new-message', (e) => {
-              incubatorChat.push('messages', {
+            vcfChat.addEventListener('vcf-chat-new-message', (e) => {
+              vcfChat.push('messages', {
                 body: e.detail.body,
                 senderName: 'Mary White',
                 currentUser: true
               });
 
-              incubatorChat.clearInput();
+              vcfChat.clearInput();
 
-              incubatorChat.scrollToBottom();
+              vcfChat.scrollToBottom();
             });
           });
         </script>
@@ -84,11 +84,11 @@
 
   </template>
   <script>
-    class IncubatorChatBasicDemos extends DemoReadyEventEmitter(ElementDemo(Polymer.Element)) {
+    class VcfChatBasicDemos extends DemoReadyEventEmitter(ElementDemo(Polymer.Element)) {
       static get is() {
-        return 'incubator-chat-basic-demos';
+        return 'vcf-chat-basic-demos';
       }
     }
-    customElements.define(IncubatorChatBasicDemos.is, IncubatorChatBasicDemos);
+    customElements.define(VcfChatBasicDemos.is, VcfChatBasicDemos);
   </script>
 </dom-module>
