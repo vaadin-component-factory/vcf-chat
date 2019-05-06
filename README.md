@@ -1,7 +1,5 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin/web-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/vaadin-component-factoryvcf-chat)
-[![Stars in Vaadin_Directory](https://img.shields.io/vaadin-directory/stars/vaadin-component-factoryvcf-chat.svg)](https://vaadin.com/directory/component/vaadin-component-factoryvcf-chat)
-[![Latest Version](https://img.shields.io/vaadin-directory/v/vaadin-component-factoryvcf-chat.svg)](https://vaadin.com/directory/component/vaadin-component-factoryvcf-chat)
 
 # &lt;vcf-chat&gt;
 
