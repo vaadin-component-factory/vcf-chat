@@ -16,7 +16,7 @@
   </vcf-chat>
 ```
 
-<img src="https://raw.githubusercontent.com/vaadin/incubator-chat/master/screenshot.png" width="200" alt="Screenshot of vcf-chat">
+<img src="https://raw.githubusercontent.com/vaadin/incubator-chat/master/screenshot.png" width="500" alt="Screenshot of vcf-chat">
 
 
 ## Installation
