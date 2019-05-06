@@ -2,7 +2,7 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin/web-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/vaadin-component-factoryvcf-chat)
 
-&lt;vcf-chat&gt; is a Web Component chat implementation with virtual scroll, infinite scroll and scrolling from bottom to top.
+&lt;vcf-chat&gt; is a Web Component chat implementation with virtual and infinite scroll. vcf-chat uses vcf-avatar to show senders/recippients avatars. New messages apears in a bootom of message list.
 
 [Live Demo ↗](http://incubator.app.fi/chat-demo/chat)
 
