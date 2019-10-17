@@ -1,6 +1,6 @@
 {
   "name": "@vaadin-component-factory/vcf-chat",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "description": "Web Component chat implementation with virtual and infinite scroll.",
   "main": "theme/lumo/vcf-chat.js",
   "author": "Vaadin Ltd",
