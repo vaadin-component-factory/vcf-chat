@@ -1,3 +1,0 @@
-window.VcfChatSuites = [
-  'sample.html',
-];

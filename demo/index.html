@@ -1,28 +1,106 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <title>vcf-chat Examples</title>
-  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes" />
+    <title>vcf-chat demo</title>
+    <script dev src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script dev type="module" src="demo.js"></script>
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+        .centered {
+          max-width: 1000px;
+        }
+        main {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+        main.hidden {
+          opacity: 0;
+        }
+        .loading-indicator {
+          text-align: center;
+        }
+      </style>
+    </custom-style>
+    <script>
+      window.addEventListener('WebComponentsReady', () => document.querySelector('main').classList.remove('hidden'));
+    </script>
+  </head>
+  <body>
+    <main class="vertical-section-container centered hidden">
+      <h4><a href="api/#/elements/Vaadin.VcfChat">API documentation ↗</a></h4>
 
-  <link rel="import" href="../../polymer/polymer.html">
-  <link rel="import" href="../../vaadin-demo-helpers/vaadin-component-demo.html">
-  <link rel="import" href="../../vaadin-demo-helpers/vaadin-demo-snippet.html">
-  <link rel="import" href="../../vaadin-demo-helpers/vaadin-demo-ready-event-emitter.html">
+      <h3>Demo sample</h3>
+      <demo-snippet>
+        <template>
+          <vcf-chat id="demo1" lazy-load-trigger-offset="300">
+            <div class="loading-indicator" slot="loading-indicator">
+              Loading..
+            </div>
+          </vcf-chat>
 
-  <script src="./vcf-chat-demo.js"></script>
+          <script>
+            let messageIndex = 0;
 
-  <link rel="import" href="../vcf-chat.html">
-  <link rel="import" href="../../vaadin-icons/vaadin-icons.html">
-  <link rel="import" href="../../vaadin-lumo-styles/typography.html">
+            function generateMessages() {
+              return Array(40)
+                .fill()
+                .map((el, index) => {
+                  if (index % 2) {
+                    return {
+                      body:
+                        `Hello! Message index: ${messageIndex++}. ` +
+                        `Consectetur vero Non placeat delectus molestias ` +
+                        `praesentium voluptatem quia Nam voluptate.`,
+                      senderName: 'Mary White',
+                      currentUser: true
+                    };
+                  } else {
+                    return {
+                      body: `Hello! Message index: ${messageIndex++}`,
+                      senderName: 'Bobby Jackson',
+                      avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png'
+                    };
+                  }
+                });
+            }
 
-  <custom-style>
-    <style include="vaadin-component-demo-shared-styles"></style>
-  </custom-style>
-</head>
+            function addMessages(chatComponent) {
+              const messages = generateMessages();
 
-<body>
-  <vaadin-component-demo config-src="demos.json"></vaadin-component-demo>
-</body>
+              for (const mes of messages) {
+                chatComponent.unshift('messages', mes);
+              }
+            }
+
+            window.addEventListener('WebComponentsReady', () => {
+              const vcfChat = document.querySelector('#demo1');
+
+              addMessages(vcfChat);
+
+              vcfChat.addEventListener('vcf-chat-trigger-lazy-load', () => {
+                setTimeout(() => {
+                  addMessages(vcfChat);
+                  vcfChat.loading = false;
+                }, 400);
+              });
+
+              vcfChat.addEventListener('vcf-chat-new-message', e => {
+                vcfChat.push('messages', {
+                  body: e.detail.body,
+                  senderName: 'Mary White',
+                  currentUser: true
+                });
+
+                vcfChat.clearInput();
+
+                vcfChat.scrollToBottom();
+              });
+            });
+          </script>
+        </template>
+      </demo-snippet>
+    </main>
+  </body>
 </html>
