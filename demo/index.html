@@ -50,7 +50,9 @@
                   if (index % 2) {
                     return {
                       body:
-                        `Hello! Message index: ${messageIndex++}. ` +
+                        'Hello! Message index: ' +
+                        messageIndex++ +
+                        '. ' +
                         `Consectetur vero Non placeat delectus molestias ` +
                         `praesentium voluptatem quia Nam voluptate.`,
                       senderName: 'Mary White',
@@ -58,7 +60,7 @@
                     };
                   } else {
                     return {
-                      body: `Hello! Message index: ${messageIndex++}`,
+                      body: 'Hello! Message index: ' + messageIndex++,
                       senderName: 'Bobby Jackson',
                       avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce54bf11889067.562541ef7cde4.png'
                     };
