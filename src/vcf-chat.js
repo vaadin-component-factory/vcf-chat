@@ -12,6 +12,7 @@ import { ElementMixin } from '@vaadin/vaadin-element-mixin';
 import { beforeNextRender } from '@polymer/polymer/lib/utils/render-status.js';
 import { Debouncer } from '@polymer/polymer/lib/utils/debounce.js';
 import { timeOut } from '@polymer/polymer/lib/utils/async.js';
+import '@vaadin/vaadin-license-checker/vaadin-license-checker';
 import '@vaadin/vaadin-progress-bar';
 import '@polymer/iron-list';
 import './vcf-chat-message';
@@ -151,6 +152,19 @@ class VcfChat extends ElementMixin(ThemableMixin(PolymerElement)) {
     };
   }
 
+  /**
+   * @protected
+   */
+  static _finalizeClass() {
+    super._finalizeClass();
+
+    const devModeCallback = window.Vaadin.developmentModeCallback;
+    const licenseChecker = devModeCallback && devModeCallback['vaadin-license-checker'];
+    if (typeof licenseChecker === 'function') {
+      licenseChecker(VcfChat);
+    }
+  }
+
   static get observers() {
     return ['_messagesLoaded(messages, messages.splices)'];
   }
@@ -206,7 +220,3 @@ customElements.define(VcfChat.is, VcfChat);
  * @namespace Vaadin
  */
 window.Vaadin.VcfChat = VcfChat;
-
-if (window.Vaadin.runIfDevelopmentMode) {
-  window.Vaadin.runIfDevelopmentMode('vaadin-license-checker', VcfChat);
-}
