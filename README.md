@@ -96,6 +96,4 @@ This component is available in Vaadin Prime subscription. It is still open sourc
 
 # License
 
-Commercial Vaadin Add-on License version 3 (CVALv3). For license terms, see LICENSE.
-
-Vaadin collects development time usage statistics to improve this product. For details and to opt-out, see https://github.com/vaadin/vaadin-usage-statistics.
+Apache License 2.0
