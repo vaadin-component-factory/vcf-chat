@@ -1,9 +1,7 @@
 /**
  * @license
  * Copyright (C) 2015 Vaadin Ltd.
- * This program is available under Commercial Vaadin Add-On License 3.0 (CVALv3).
- * See the file LICENSE.md distributed with this software for more information about licensing.
- * See [the website]{@link https://vaadin.com/license/cval-3} for the complete license.
+ * This program is available under Apache License 2.0
  */
 
 import { html, PolymerElement } from '@polymer/polymer/polymer-element';
@@ -12,7 +10,6 @@ import { ElementMixin } from '@vaadin/vaadin-element-mixin';
 import { beforeNextRender } from '@polymer/polymer/lib/utils/render-status.js';
 import { Debouncer } from '@polymer/polymer/lib/utils/debounce.js';
 import { timeOut } from '@polymer/polymer/lib/utils/async.js';
-import '@vaadin/vaadin-license-checker/vaadin-license-checker';
 import '@vaadin/vaadin-progress-bar';
 import '@polymer/iron-list';
 import './vcf-chat-message';
@@ -150,19 +147,6 @@ class VcfChat extends ElementMixin(ThemableMixin(PolymerElement)) {
         value: () => ({})
       }
     };
-  }
-
-  /**
-   * @protected
-   */
-  static _finalizeClass() {
-    super._finalizeClass();
-
-    const devModeCallback = window.Vaadin.developmentModeCallback;
-    const licenseChecker = devModeCallback && devModeCallback['vaadin-license-checker'];
-    if (typeof licenseChecker === 'function') {
-      licenseChecker(VcfChat);
-    }
   }
 
   static get observers() {
